@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #FFD300;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.img {
+    height: 350px;
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 150px
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    width: 100px;
+    height: 75px;
+    border: none;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 150px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 150px;
+}

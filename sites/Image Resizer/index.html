@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>Image Resizer</title>
+</head>
+<body>
+
+    <img src="image.jpg" id="img" class="img">
+
+    <section class="content">
+        <label for="" class="heigth">Type the desired height (in pixels): </label>
+        <input type="text" id="heigth" style="background-color: white;" name="heigth" required>
+        <label for="" class="width">Type the desired width (in pixels): </label>
+        <input type="text" id="width" style="background-color: white;" name="width" required>
+        <button type="submit" class="btn" id="btn" onclick="resize();">Set</button>
+    </section>
+    
+<script>
+
+    function resize() {
+        var height = document.getElementById("heigth").value;
+        var width = document.getElementById("width").value;
+    }
+
+    let btnSet = document.querySelector(".btn");
+
+    btnSet.addEventListener("click", () => {
+        var h = document.getElementById("heigth").value;
+        document.getElementById("img").style.height = h + "px";
+        var w = document.getElementById("width").value;
+        document.getElementById("img").style.width = w + "px";
+    });
+
+</script>
+
+</body>
+</html>

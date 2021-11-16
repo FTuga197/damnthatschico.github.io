@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet"> 
+    <title>My Portoflio</title>
+</head>
+<body>
+
+    <button type="button" class="contact" id="contact"><b>Contact me</b></button>
+
+    <div class="tooltip" id="tooltip">
+        <img src="imgs/close.png" class="close" id="close">
+        <div class="contactText">If you like my work, feel free to contact me.</div>
+        <div class="contactIcons">
+            <a href="https://www.linkedin.com/in/franciscomonizribeiro/"><img src="imgs/linkedin.png" class="linkedIn"></a>
+            <a href="mailto:francisco.moniz97@gmail.com"><img src="imgs/gmail.png" class="gmail"></a>    
+        </div>
+    </div>
+
+    <img src="imgs/avatar.png" class="avatar">
+
+    <div class="subtitle"><b>Aspiring Front-End Developer</b></div>
+
+    <div class="intro">
+        My name is <b>Francisco Moniz</b>. Since I was a kid that my dream is to be a programmer and with little chance of getting a degree I started learning from free sources in the internet.
+        In this portfolio I want to show my projects and try to follow my dreams even without a paper to prove it.
+    </div>
+
+    <div class="spacerOne">
+        <div class="cv"><b>Curriculum Vitae</b></div>
+        <img src="imgs/icon.png" class="icon">
+        <div class="course">
+            <div style="font-size: 22px;"><b>Education</b></div>
+            <br>
+            <div><b>Course:</b> .NET Programming</div>
+            <div><b>School:</b> Citeforma</div>
+            <div><b>Languages:</b> C#, HTML, CSS, SQL</div>
+            <br>
+            <div style="font-size: 22px;"><b>Work Experience</b></div>
+            <br>
+            <div><b>Place:</b> Janela Digital, S.A.</div>
+            <div><b>Position:</b> Intern</div>
+
+        </div>
+    </div>
+
+    <div class="spacerTwo"></div>
+
+    <div class="spacerThree">
+        <div><b>Some practice projects...</b></div>
+        <div class="sites">
+            <a href="sites/Death Cause Generator/index.html" class="siteOne" style="text-decoration: none;">Death Cause Generator</a>
+            <a href="sites/Image Resizer/index.html" class="siteTwo" style="text-decoration: none;">Image Resizer</a>
+        </div>
+        <div class="warning"><b>WARNING: </b>Some of these projects may contain offensive language. Please do not feel offended, as their only purpose is to show my programming skills.</div>
+               
+    </div>
+
+    <footer class="ft"><b>Created by: Francisco Moniz Ribeiro</b></footer>
+    
+    <script>
+        var btn = document.querySelector(".contact");
+        var closeBtn = document.querySelector(".close")
+
+        btn.addEventListener("click" , () => {
+            document.getElementById("tooltip").style.display = "block";
+        });
+
+        closeBtn.addEventListener("click" , () => {
+            document.getElementById("tooltip").style.display = "none";
+        });
+
+    </script>
+
+</body>
+</html>

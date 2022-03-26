@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+    <title>How will you die?</title>
+</head>
+<body>
+
+<h1>How will you die?</h1>
+
+    <section class="main">
+        <label for="name" class="name">What's your name? </label>
+        <input type="text" id="name" name="name" required>
+    </section>
+
+    
+
+    <section class="second">
+        <div class="gender">Are you a boy? Or a girl? </div>
+
+        <section class="icons">
+                <input type="radio" id="boy" name="gender">
+                <label for="boy"><img src="eggplant.png" class="boy"></label>
+        
+                <input type="radio" id="girl" name="gender">
+                <label for="girl"><img src="peach.png" class="girl"></label>
+        </section>
+
+    </section>
+
+    <section class="btnSection">
+        <audio src="sfx.mp3" id="audio"></audio>
+        <button type="submit" class="btn" id="btn" onclick="username();">Just tell me already</button>
+        <button type="submit" id="next" class="next" disabled style="display: none;">Tell me again</button>
+        <button type="button" id="restart" class="restart" style="display: none;">Restart</button>
+    </section>
+    
+    <h3 id="deaths" class="deaths"></h3>
+
+    <div class="sfxWarning">Turn your audio on for a better experience</div>
+    <footer class="ft">Created by Francisco Moniz Ribeiro</footer>
+
+    <script>
+
+        function username() {
+            var user = document.getElementById("name").value;
+        }
+
+        let btnRandom = document.querySelector("button");
+        let btnNext = document.querySelector(".next");
+        let btnRestart = document.querySelector(".restart");
+        let sound = document.querySelector("#audio");
+        let result = document.querySelector("h3");
+
+        let items = [
+            "a horse dildo",
+            "a tricicle with no wheels",
+            "yo momma",
+            "Rihanna's forehead",
+            "a hobo asking for a cigarette",
+            "Barack Obama",
+            "the original copy of 1984",
+            "taking a ride with Princess Di",
+            "a dead ostrich",
+            "listening to Cristina Ferreira yelling"
+        ];
+
+        let causes = [
+            "choked",
+            "shot",
+            "blown",
+            "drowned",
+            "hit by a flying fuck",
+            "of sifilis",
+            "raped",
+            "left naked outside your house",
+            "of diabetes",
+            "of severe diarrhea"
+        ];
+
+        function getRandomNumber(min, max) {
+            let step1 = max - min + 1;
+            let step2 = Math.random() * step1;
+            let result = Math.floor(step2) + min;
+            return result;
+        }
+
+        btnRandom.addEventListener("click", () => {
+            sound.play();
+            var x = document.getElementById("name").value;
+            document.getElementById("name").disabled = true;
+            document.getElementById("name").style.backgroundColor = "gray";
+            document.getElementById("restart").style.display = "block";
+            document.getElementById("btn").disabled = true;
+            document.getElementById("btn").style.display = "none";
+            document.getElementById("next").style.display = "block";
+            document.getElementById("next").disabled = false;
+
+            let index = getRandomNumber(0, items.length-1);
+            let index2 = getRandomNumber(0, causes.length-1);
+            if (document.getElementById("boy").checked) {
+                result.innerText = x + ", you will die " + causes[index] + " by " + items[index2] + ". Dude...";
+            }
+            else if (document.getElementById("girl").checked) {
+                result.innerText = x + ", you will die " + causes[index] + " by " + items[index2] + ". Gurl...";
+            }
+            else {
+                result.innerText = x + ", you will die " + causes[index] + " by " + items[index2] + ".";
+            }
+        });
+
+        btnNext.addEventListener("click", () => {
+            var x = document.getElementById("name").value;
+            document.getElementById("name").disabled = true;
+            document.getElementById("name").style.backgroundColor = "gray";
+            document.getElementById("restart").style.display = "block";
+            let index = getRandomNumber(0, items.length-1);
+            let index2 = getRandomNumber(0, causes.length-1);
+            if (document.getElementById("boy").checked) {
+                result.innerText = x + ", you will die " + causes[index] + " by " + items[index2] + ". Dude...";
+            }
+            else if (document.getElementById("girl").checked) {
+                result.innerText = x + ", you will die " + causes[index] + " by " + items[index2] + ". Gurl...";
+            }
+            else {
+                result.innerText = x + ", you will die " + causes[index] + " by " + items[index2] + ".";
+            }
+        });
+
+        btnRestart.addEventListener("click", function() {
+            localStorage.clear();
+            location.reload();
+        });
+
+    </script>
+
+</body>
+</html>

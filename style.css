@@ -230,3 +230,116 @@
         stroke-dashoffset: 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .avatar {
+        height: 180px;
+        width: auto;
+    }
+
+    .contact {
+        font-size: 18px;
+        margin: 27.5px 20px auto auto;
+    }
+
+    .tooltip {
+        width: 250px;
+        height: auto;
+        margin: auto auto auto 40%;
+    }
+
+    .contactText {
+        font-size: 16px;
+        width: 80%;
+        margin-left: 15px;
+    }
+
+    .close {
+        height: 25px;
+        width: auto;
+        margin-left: 75%;
+    }
+
+    .linkedin {
+        height: 100px;
+        margin-left: -15px;
+    }
+    
+    .gmail {
+        height: 75px;
+        margin-left: -15px;
+    }
+
+    .header {
+        height: 75px;
+    }
+
+    .head {
+        font-size: 18px;
+        width: 75%;
+        margin: 10% auto 10% auto;
+    }
+
+    .head_bold {
+        font-size: 21px;
+    }
+
+    .cv {
+        font-size: 21px;
+    }
+
+    .edu, .work {
+        font-size: 18px;
+    }
+
+    .item1, .item2 {
+        font-size: 16px;
+        margin-bottom: auto;
+        margin-left: 5%;
+    }
+
+    .item3 {
+        font-size: 16px;
+        margin-bottom: auto;
+        margin-right: 5%;
+    }
+
+    .icon1, .icon2{
+        height: 100px;
+        width: auto;
+    }
+
+    .icon3 {
+        height: auto;
+        width: 170px;
+    }
+
+    .pjs_title {
+        font-size: 21px;
+    }
+
+    .pj_title1 {
+        font-size: 16px;
+        margin: 10% auto 10% auto;
+    }
+
+    .pj_title2 {
+        font-size: 16px;
+        margin: 23% auto 10% auto;
+    }
+
+    .pj1, .pj2 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .warning {
+        font-size: 14px;
+        width: 75%;
+        margin: auto;
+    }
+
+    .ft_txt {
+        font-size: 12px;
+    }
+}

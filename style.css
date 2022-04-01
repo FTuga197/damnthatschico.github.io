@@ -10,7 +10,8 @@
     background-color: #2F86A6;
     width: auto;
     height: 100px;
-    border: solid black 3px;    
+    border-top: solid black 3px;
+	border-bottom: solid black 3px;
 }
 
 .contact {
@@ -102,7 +103,8 @@
     text-align: center;
     color: white;
     background-color: #2F86A6;
-    border: solid black 3px;
+    border-top: solid black 3px;
+	border-bottom: solid black 3px;
 }
 
 .cv {

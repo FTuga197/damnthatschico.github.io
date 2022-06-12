@@ -70,8 +70,7 @@ html {
     font-size: 20px;
     border-radius: 7px;
     display: inline-block;
-    margin-top: 35px;
-    margin-right: 35px;
+    margin: 45px 35px auto auto;
     grid-area: bt;
 }
 
@@ -81,6 +80,7 @@ html {
 }
 
 .profile-pic {
+    margin-top: 35px;
     height: 300px;
     border-radius: 50%;
     outline: solid white 4px;
@@ -155,6 +155,10 @@ html {
     display: block;
     border-top: solid black 3px;
     border-bottom: solid black 3px;
+}
+
+#splitter2 {
+    display: none;
 }
 
 #rect4142 {

@@ -153,7 +153,8 @@ html {
 
 #splitter, #splitter2 {
     display: block;
-    outline: solid black 3px;
+    border-top: solid black 3px;
+    border-bottom: solid black 3px;
 }
 
 #rect4142 {
@@ -177,10 +178,11 @@ html {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 720px) {
     .header {
         font-size: 13px;
         height: 60px;
+        border-bottom: solid black 2px;
     }
 
     .item1, .item2, .item3 {
@@ -216,7 +218,7 @@ html {
         padding: 10px;
         position: absolute;
         margin-top: 185px;
-        margin-left: -34px;
+        margin-left: -35px;
     }
 
     .profile-pic {
@@ -265,12 +267,17 @@ html {
         margin-top: 30px;
     }
 
+    #splitter {
+        border-top: solid black 2px;
+        border-bottom: solid black 2px;
+    }
+
     #splitter2 {
         display: none;
     }
 
     .footer {
-        border-top: solid black 3px;
+        border-top: solid black 2px;
         font-size: 12px;
     }
 }
